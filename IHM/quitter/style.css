@@ -1,0 +1,133 @@
+/* 
+Styling to Aria roles as much as possible to enforce accessibility. 
+*/
+.screen-reader {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+body {
+  background: black url("back.jpg") no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+[role="menubar"] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 50px;
+  position: relative;
+  top: -1px;
+}
+[role="menubar"]::before, [role="menubar"]::after {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-right: 24px;
+  padding: 3px 6px;
+  color: #fff;
+  content: 'L1';
+  opacity: .4;
+  font-family: sans-serif;
+  font-size: 10px;
+  position: relative;
+  top: -2px;
+}
+[role="menubar"]::after {
+  content: 'R1';
+}
+[role="menubar"].menu--bottom::after {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 36px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  content: 'R2';
+  float: right;
+  font-size: 18px;
+  padding: 5px;
+}
+[role="menubar"]::before {
+  display: none;
+}
+[role="menubar"].menu--bottom .close::before {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 36px;
+  content: 'X';
+  display: block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 2.25;
+}
+[role="menubar"] .menubar--item {
+  display: inline-block;
+  margin-right: 24px;
+}
+[role="menubar"] [role="menuitem"] {
+  color: #fff;
+  display: block;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  line-height: 50px;
+  opacity: .4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity .5s;
+  padding: 0 8px;
+}
+[role="menubar"] [role="menuitem"][data-selected="selected"], [role="menubar"] [role="menuitem"]:hover, [role="menubar"] [role="menuitem"]:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+
+.menu--bottom [role="menuitem"][data-selected="selected"], .menu--bottom [role="menuitem"]:hover, .menu--bottom [role="menuitem"]:focus {
+  border-bottom: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+a.tileLink {
+  background: rgba(0, 0, 0, 0.7);
+  display: block;
+  flex: 1;
+  text-decoration: none;
+  margin: 0 8px;
+  height: 400px;
+  max-width: 420px;
+  min-width: 320px;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+}
+a.tileLink .tile {
+  font-family: sans-serif;
+}
+a.tileLink .tile figure {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+a.tileLink .tile figure img {
+  width: 100%;
+  height: auto;
+}
+a.tileLink .tile figure figcaption {
+  padding: 16px;
+}
+a.tileLink .tile figure figcaption h2 {
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+a.tileLink:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: translate3d(0, -8px, 0);
+}

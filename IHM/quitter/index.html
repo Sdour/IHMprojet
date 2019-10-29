@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Gaming Menu 1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="background-image"></div>
+<nav id="primary-navigation">
+  <ul class="menubar" role="menubar" aria-label="Main Game Menu">
+    <li class="menubar--item" role="none">
+        <a role="menuitem" href="#" data-context="home">Home</a>
+    </li>
+    
+    <li class="menubar--item" role="none">
+      <a role="menuitem" data-selected="selected" href="#" data-context="multiplayer">Jeux d'enfants</a>
+    </li>
+    
+    <li class="menubar--item" role="none">
+      <a role="menuitem" href="#" data-context="campaign">Infos</a>
+    </li>
+    
+    <li class="menubar--item" role="none">
+      <a role="menuitem" href="#" data-context="soldier">Competition</a>
+    </li>
+    
+    <li class="menubar--item" role="none">
+      <a role="menuitem" href="#" data-context="store">Anime</a>
+    </li>
+    
+    <li class="menubar--item" role="none">
+      <a role="menuitem" href="#" data-context="more"Autres</a>
+    </li>
+    
+  </ul>
+  
+</nav>
+
+<div class="row">
+  <a class="tileLink" href="#">
+    <article class="tile">
+        <figure>
+          <img src="Papas-Pastaria.jpg" alt="Fighters facing off" />
+        <figcaption>
+          <h2>Papa's Pastaria</h2>
+          Preparez des repas italien avec papa Louie
+        </figcaption>
+      </figure>
+    </article>
+  </a>
+  <a class="tileLink" href="http://localhost/gameproject/IHM/into/index.php">  
+    <article class="tile">
+    <figure>
+          <img src="Quiz.PNG" alt="Single fighter resting" />
+        <figcaption>
+          <h2>QUIZ</h2>
+          Decouvrez le monde des animaux.
+        </figcaption>
+      </figure>
+  </article>
+  </a>
+  <a class="tileLink" href="#">  
+    <article class="tile">
+      <figure>
+        <img src="Cactus.jpg" alt="Single fighter determined" />
+        <figcaption>
+          <h2>Cactus Mc Coy</h2>
+          Les aventures de cactus Mc Coy
+        </figcaption>
+      </figure>
+    </article>
+  </a>
+  <a class="tileLink" href="#">
+    <article class="tile">
+          <figure>
+            <img src="Boruto.jpg" />
+          <figcaption>
+            <h2>Boruto </h2>
+            Découvrez le monde des ninjas avec Boruto Uzumaki et ses amis
+          </figcaption>
+        </figure>
+    </article>
+  </a>
+</div>
+
+<nav id="secondary-navigation">
+  <ul class="menubar menu--bottom" role="menubar" aria-label="Secondary Game Menu">
+    <li class="menubar--item" role="none">
+        <a class="close" role="menuitem" href="#" data-context="home">          
+          <span class="screen-reader">Return to previous screen.</span>
+        </a>
+    </li>    
+  </ul>
+</nav>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

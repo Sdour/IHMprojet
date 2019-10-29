@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Kidzinia</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
+  <defs>
+    <filter id='squiggly-0'>
+      <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='0'></feturbulence>
+      <fedisplacementmap id='displacement' in2='noise' in='SourceGraphic' scale='6'></fedisplacementmap>
+    </filter>
+    <filter id='squiggly-1'>
+      <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='1'></feturbulence>
+      <fedisplacementmap in2='noise' in='SourceGraphic' scale='8'></fedisplacementmap>
+    </filter>
+    <filter id='squiggly-2'>
+      <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='2'></feturbulence>
+      <fedisplacementmap in2='noise' in='SourceGraphic' scale='6'></fedisplacementmap>
+    </filter>
+    <filter id='squiggly-3'>
+      <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='3'></feturbulence>
+      <fedisplacementmap in2='noise' in='SourceGraphic' scale='8'></fedisplacementmap>
+    </filter>
+    <filter id='squiggly-4'>
+      <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='4'></feturbulence>
+      <fedisplacementmap in2='noise' in='SourceGraphic' scale='6'></fedisplacementmap>
+    </filter>
+  </defs>
+</svg>
+<div class='overlay'></div>
+<div class='options'>
+  <div class='options_sf'>
+    <img src='sfIcon2.png'>
+  </div>
+  <div class='options_bg'>
+    <img src='bgIcon2.png'>
+  </div>
+</div>
+<div class='main'>
+  <div class='main_inner'>
+    <div class='main_inner__logo'>
+      <a href='http://localhost/gameproject/IHM/into/index.php'>
+        <i class="fa fa-home fa-2x" aria-hidden="true" style="color:white"></i>
+      </a>
+    </div>
+
+  <div class='main_inner__modalOverlay'></div>
+    <div class='main_inner__modal'></div>
+    <div class='main_inner__modalContent'>
+      <h1 class='testScore'>Vous avez terminé l'apprentissage</h1>
+      <p></p>
+       <div class='again'>
+        <p>
+          <button class='playAgain'><i class="fa fa-home fa-2x" aria-hidden="true"></i></button>
+          <button class='playAgainn'><i class="fa fa-repeat fa-2x" aria-hidden="true"></i></button>
+        </p>
+      </div>
+
+    </div>
+
+    <div class='main_inner__title'>
+      <img class='nomaudio' src='bgIcon2.png'>
+      <h1 class='title_title'></h1>
+      <div class='hint'></div>
+    </div>
+    
+    <div class='main_inner__circle'></div>
+    <div class='main_inner__feedback'></div>
+    <div class='main_inner__scenes'>
+      <div class='scene akuaku'>
+        <div class='container'>
+          <img src="lion.png">
+        </div>
+      </div>
+      <div class='scene kirby'>
+        <div id='container'>
+          <img src="girafe.png"/>
+        </div>
+      </div>
+      <div class='scene hexipal'>
+        <div id='hexipal'>
+          <img src="hippopotame.png"/>
+        </div>
+      </div>
+      <div class='scene moogle'>
+        <div class='container'>
+          <img src="tortue.png"/>
+        </div>
+      </div>
+      <div class='scene mario'>
+        <div class='container'>
+          <img src="singe.png"/>
+        </div>
+      </div>
+
+      <div class='scene perroquet'>
+        <div class='container'>
+          <img src="tigre.png"/>
+        </div>
+      </div>
+      <div class='scene elephant'>
+        <div class='container'>
+          <img src="elephant.png"/>
+        </div>
+      </div>
+      <div class='scene caméléon'>
+        <div class='container'>
+          <img src="mouton.png"/>
+        </div>
+      </div>
+      <div class='scene zèbre'>
+        <div class='container'>
+          <img src="hibou.png"/>
+        </div>
+      </div>
+      <div class='scene crocodile'>
+        <div class='container'>
+          <img src="crocodile.png"/>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class='main_inner__answers'>
+      <div class='answer'></div>
+    </div>
+   
+  </div>
+</div>
+<canvas class='grain'></canvas>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>

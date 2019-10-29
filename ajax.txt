@@ -1,0 +1,11 @@
+$.ajax
+({
+   url: 'http://localhost/gameproject/score.php',
+   type: 'post',
+   data:
+    {
+     id : sessionStorage.getItem("user"),
+     score : 50
+    }
+
+});
